@@ -106,32 +106,57 @@
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
+								<p>Leirfallsgata 6<br />
+								Oslo, Norway</p>
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
+								<p><a href="#">(+45) 60460280</a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
+								<p><a href="#">Mikkelflassen15@gmail.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
+							</ul>
+							<ul class="icons" style="list-style: none; padding: 0;">
+								<li style="display: inline-block; margin-right: 10px;">
+								  <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+									<i class="icon brands fa-twitter" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+									<span class="label">Twitter</span>
+								  </a>
+								</li>
+								<li style="display: inline-block; margin-right: 10px;">
+								  <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+									<i class="icon brands fa-facebook-f" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+									<span class="label">Facebook</span>
+								  </a>
+								</li>
+								<li style="display: inline-block; margin-right: 10px;">
+								  <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+									<img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto;  color: rgb(0, 0, 0);"></i>
+									<span class="label">&#x200B; &#x200B; &#x200B; &#x200B; Codewars</span>
+								  </a>
+								</li>
+								<li style="display: inline-block; margin-right: 10px;">
+								  <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+									<i class="icon brands fa-github" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+									<span class="label">GitHub</span>
+								  </a>
+								</li>
+							  </ul>
+							  
+								  </a>
+								</li>
+							  </ul>
 							</section>
 						</section>
 					</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Copywrite belongs to Mikkel Friis Lassen</li><li>Design: <a href="index.html">Mikkel Lassen</a></li></ul>
 					</div>
 
 			</div>
@@ -144,6 +169,39 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+            (function() {
+             emailjs.init(Cj5yjqKeDPB_yElp_); //  User ID from EmailJS
+              })();
+             </script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				  document.getElementById('yourFormId').addEventListener('submit', function(event) {
+					event.preventDefault();
+			  
+					// Fetch form values
+					const name = document.getElementById('name').value;
+					const email = document.getElementById('email').value;
+					const message = document.getElementById('message').value;
+			  
+					// Use EmailJS to send email
+					emailjs.send(service_kl53zhf, template_v42oeqr, {
+					  name: name,
+					  email: email,
+					  message: message
+					})
+					.then(function(response) {
+					  console.log('Email sent!', response);
+					  // Optionally, show a success message or redirect to a thank-you page
+					}, function(error) {
+					  console.error('Error sending email:', error);
+					  // Handle errors or show an error message to the user
+					});
+				  });
+				});
+			  </script>
+			  
 
 	</body>
 </html>
