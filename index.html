@@ -28,6 +28,47 @@
                 width: 100%;
                 height: auto;
             }
+
+			/* Increase spacing and style the form elements */
+.field {
+  margin-bottom: 20px; /* Increased margin for more space */
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px; /* Added space below labels */
+}
+
+.field input {
+  display: block;
+  width: calc(100% - 20px); /* Adjust input width with padding/margin */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Increased margin for inputs */
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Adding transition */
+}
+
+input[type="submit"]:hover {
+  background-color: #344075; /* Change color on hover */
+}
+
+
+			
         </style>
 	</head>
 	<body class="is-preload">
@@ -54,7 +95,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="generic.html">Full story</a></li>
+							<li><a href="generic.html">Blog</a></li>
 							<li><a href="elements.html">Resume</a></li>
 						</ul>
 						<ul class="icons" style="list-style: none; padding: 0;">
@@ -73,7 +114,7 @@
 							<li style="display: inline-block; margin-right: 10px;">
 							  <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 								<img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto; filter: brightness(0) invert(1);">
-								<span class="label">&#x200B; &#x200B; &#x200B; &#x200B; Codewars</span>
+								<span class="label">&#x200B; &#x200B; &#x200B; Codewars</span>
 							  </a>
 							</li>
 							<li style="display: inline-block; margin-right: 10px;">
@@ -112,7 +153,7 @@
 							</ul>
 						</article>
 
-						<!-- Posts -->
+						<!-- Posts 1 -->
 							<section class="posts">
 								<article>
 									<header>
@@ -124,9 +165,10 @@
 									<a href="#" class="image fit"><img src="images/pic09.jpg" alt="" /></a>
 									<p>Mobile Money application in Africa. My team and I build a integration to SPENNs mobile banking application. To let user to invest local fiat and trade it to the most popular crypto currencies.<br> Marked fit, feature discovery, and marketing .</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+									
 									</ul>
 								</article>
+								<!-- Posts 2 -->
 								<article>
 									<header>
 										<span class="date">November, 2023</span>
@@ -139,6 +181,7 @@
 										
 									</ul>
 								</article>
+								<!-- Posts 3 
 								<article>
 									<header>
 										<span class="date">April 18, 2017</span>
@@ -151,6 +194,7 @@
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
+								<!-- Posts 4
 								<article>
 									<header>
 										<span class="date">April 14, 2017</span>
@@ -163,6 +207,7 @@
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
+								<!-- Posts 5 
 								<article>
 									<header>
 										<span class="date">April 11, 2017</span>
@@ -175,6 +220,7 @@
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
+								 <!-- Posts 6 
 								<article>
 									<header>
 										<span class="date">April 7, 2017</span>
@@ -188,7 +234,7 @@
 									</ul>
 								</article>
 							</section>
-
+ Posts -->
 						
 
 					</div>
@@ -196,24 +242,31 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
+							<form id="form">
+								<div class="field">
+								  <label for="name">name</label>
+								  <input type="text" name="name" id="name">
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+								<div class="field">
+								  <label for="email">email</label>
+								  <input type="text" name="email" id="email">
+								</div>
+								<div class="field">
+								  <label for="message">message</label>
+								  <input type="text" name="message" id="message">
+								</div>
+								
+							  
+								<input type="submit" id="button" value="Send Email">
+							  </form>
+							  
+							  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+							  
+							  <script type="text/javascript">
+								emailjs.init('Cj5yjqKeDPB_yElp_')
+							  
+							  </script>
+							  
 							</form>
 						</section>
 						<section class="split contact">
@@ -283,37 +336,30 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-            <script>
-            (function() {
-             emailjs.init(Cj5yjqKeDPB_yElp_); //  User ID from EmailJS
-              })();
-             </script>
-			<script>
-				document.addEventListener('DOMContentLoaded', function() {
-				  document.getElementById('yourFormId').addEventListener('submit', function(event) {
-					event.preventDefault();
-			  
-					// Fetch form values
-					const name = document.getElementById('name').value;
-					const email = document.getElementById('email').value;
-					const message = document.getElementById('message').value;
-			  
-					// Use EmailJS to send email
-					emailjs.send(service_kl53zhf, template_v42oeqr, {
-					  name: name,
-					  email: email,
-					  message: message
-					})
-					.then(function(response) {
-					  console.log('Email sent!', response);
-					  // Optionally, show a success message or redirect to a thank-you page
-					}, function(error) {
-					  console.error('Error sending email:', error);
-					  // Handle errors or show an error message to the user
+            
+            
+
+			  <script> const btn = document.getElementById('button');
+
+				document.getElementById('form')
+				 .addEventListener('submit', function(event) {
+				   event.preventDefault();
+				
+				   btn.value = 'Sending...';
+				
+				   const serviceID = 'default_service';
+				   const templateID = 'template_v42oeqr';
+				
+				   emailjs.sendForm(service_kl53zhf, template_eut10k8, this)
+					.then(() => {
+					  btn.value = 'Send Email';
+					  alert('Sent!');
+					}, (err) => {
+					  btn.value = 'Send Email';
+					  alert(JSON.stringify(err));
 					});
-				  });
 				});
-			  </script>
+				</script>
 			  
 
 	</body>

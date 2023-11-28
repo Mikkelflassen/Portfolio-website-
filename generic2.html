@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .page.active {
+            background-color: #3498db; /* Blue color for the active page */
+            color: white; /* Text color for the active page */
+        }
+    </style>
 </head>
 <body class="is-preload">
     <div id="wrapper">
@@ -85,49 +91,21 @@
             </section>
 			<header><footer>
 				<!-- Pagination -->
-<div class="pagination">
-    <!--<a href="#" class="previous">Prev</a>-->
-    <a href="#" class="page active">1</a>
-    <a href="#" class="page">2</a>
-    <a href="#" class="page">3</a>
+                <div class="pagination">
+                    <a href="#" class="previous">Prev</a>
+                    <a href="#generic.html" class="page" onclick="navigateToPage('generic.html')">1</a>
+                    <a href="#generic2.html" class="page active" onclick="navigateToPage('generic2.html')">2</a>
+                    <a href="#generic3.html" class="page" onclick="navigateToPage('generic3.html')">3</a>
+                    <a href="#" class="next">Next</a>
+                </div>
+                
+                <script>
+                    function navigateToPage(pageName) {
+                        window.location.href = pageName;
+                    }
+                </script>
 
-    <a href="#" class="next">Next</a>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Get all the pagination links
-        var pages = $('.page');
-        var currentPage = 1;
-
-        // Function to handle pagination click event
-        pages.on('click', function (e) {
-            e.preventDefault();
-
-            var clickedPage = $(this);
-            if (clickedPage.hasClass('next')) {
-                currentPage++;
-            } else if (clickedPage.hasClass('previous')) {
-                currentPage--;
-            } else {
-                currentPage = parseInt(clickedPage.text());
-            }
-
-            // Perform actions based on the clicked page (for demonstration, log the current page)
-            console.log('Current Page:', currentPage);
-
-            // Add/Remove 'active' class based on the clicked page
-            pages.removeClass('active');
-            clickedPage.addClass('active');
-        });
-    });
-</script>
-        </div>
-		
-			</section>
-			
-        </div>
 		
 		
 
