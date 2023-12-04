@@ -13,33 +13,33 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			/* CSS for game grid within a specific class */
-			.game-container {
+			.game-container .game-grid {
 			  max-width: 600px;
 			  margin: 0 auto;
 			  text-align: center;
 			  padding: 20px;
 			}
 		
-			.game-grid .grid {
+			.game-container .game-grid .grid {
 			  display: grid;
 			  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
-			  gap: 15px;
+			  gap: 10px;
 			  margin-top: 20px;
 			}
 		
-			.game-grid .card {
+			.game-container .game-grid .card {
 			  display: flex;
 			  justify-content: center;
 			  align-items: center;
-			  height: 100px;
-			  font-size: 36px;
+			  height: 80px;
+			  font-size: 24px;
 			  background-color: #f0f0f0;
-			  border-radius: 8px;
+			  border-radius: 5px;
 			  cursor: pointer;
 			  transition: background-color 0.3s ease;
 			}
 		
-			.game-grid .card:hover {
+			.game-container .game-grid .card:hover {
 			  background-color: #ccc;
 			}
 		
@@ -102,7 +102,7 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h1>My<br />
+									<h1>Mikkel Lassen<br />
 									</h1>
 								</header>
 
