@@ -11,6 +11,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* CSS for game grid within a specific class */
+			.game-container {
+			  max-width: 600px;
+			  margin: 0 auto;
+			  text-align: center;
+			  padding: 20px;
+			}
+		
+			.game-grid .grid {
+			  display: grid;
+			  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+			  gap: 15px;
+			  margin-top: 20px;
+			}
+		
+			.game-grid .card {
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  height: 100px;
+			  font-size: 36px;
+			  background-color: #f0f0f0;
+			  border-radius: 8px;
+			  cursor: pointer;
+			  transition: background-color 0.3s ease;
+			}
+		
+			.game-grid .card:hover {
+			  background-color: #ccc;
+			}
+		
+			/* Style for message */
+			.message {
+			  font-size: 24px;
+			  margin-bottom: 10px;
+			}
+		  </style>
 	</head>
 	<body class="is-preload">
 
@@ -65,7 +103,7 @@
 							<section class="post">
 								<header class="major">
 									<h1>My<br />
-									story</h1>
+									</h1>
 								</header>
 
 								<!-- Text stuff -->
@@ -75,11 +113,15 @@
 									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
 									Finally, this is a <a href="#">link</a>.</p>
 									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
+									<div class="game-container">
+										<div class="game-container">
+											<div class="game-grid">
+											  <div class="grid"></div>
+											  <button onclick="startGame()">Start Game</button>
+											</div>
+											<div class="message" id="message"></div>
+										  </div>
+								
 									<hr />
 									<header>
 										<h2>Heading with a Subtitle</h2>
@@ -570,6 +612,63 @@ print 'It took ' + i + ' iterations to sort the deck.';
 				});
 			  });
 			});
+		  </script>
+		  <script>
+			const emojis = ['😀', '😁', '😎', '🥳', '😊', '🤩', '😂', '😜'];
+			let emojisGrid = [];
+			let flippedCards = [];
+			let gameStarted = false;
+		
+			function startGame() {
+			  if (gameStarted) return;
+			  gameStarted = true;
+			  emojisGrid = [...emojis, ...emojis].sort(() => Math.random() - 0.5);
+		
+			  const gridContainer = document.querySelector('.game-grid .grid');
+			  gridContainer.innerHTML = '';
+		
+			  emojisGrid.forEach((emoji, index) => {
+				const card = document.createElement('div');
+				card.classList.add('card');
+				card.dataset.index = index;
+				card.innerText = '?';
+				card.addEventListener('click', () => flipCard(card));
+				gridContainer.appendChild(card);
+			  });
+			}
+		
+			function flipCard(card) {
+			  if (flippedCards.length >= 2) return;
+			  const index = parseInt(card.dataset.index);
+		
+			  if (flippedCards.length === 0 || flippedCards[0].card !== card) {
+				card.innerText = emojisGrid[index];
+				flippedCards.push({ index, card });
+			  }
+		
+			  if (flippedCards.length === 2) {
+				setTimeout(checkMatch, 1000);
+			  }
+			}
+		
+			function checkMatch() {
+			  const [card1, card2] = flippedCards;
+			  const index1 = card1.index;
+			  const index2 = card2.index;
+		
+			  if (emojisGrid[index1] === emojisGrid[index2]) {
+				card1.card.removeEventListener('click', () => flipCard(card1.card));
+				card2.card.removeEventListener('click', () => flipCard(card2.card));
+				document.getElementById('message').innerText = 'Congratulations!';
+			  } else {
+				card1.card.innerText = '?';
+				card2.card.innerText = '?';
+				document.getElementById('message').innerText = 'Try Again!';
+			  }
+			  flippedCards = [];
+		
+			  document.getElementById('message').style.visibility = 'visible';
+			}
 		  </script>
 		  
 
