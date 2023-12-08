@@ -2903,6 +2903,20 @@ input, select, textarea {
 
 /* Section/Article */
 
+
+.small-articles {
+    display: flex;
+    flex-direction: column; /* Display articles in a column */
+	border-top: 2px solid #eeeeee;
+}
+
+.first-small-article,
+.second-small-article {
+    margin-bottom: 50px; /* Adjust the space between the smaller articles */
+    border-bottom: 2px solid #eeeeee; /* Add a border between the smaller articles */
+    padding-bottom: 20px; /* Optional: add padding below each smaller article */
+}
+
 	section.special, article.special {
 		text-align: center;
 	}
