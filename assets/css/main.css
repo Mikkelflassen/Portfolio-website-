@@ -4837,7 +4837,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #navPanel .close:hover {
-  color: #212931;
+  color: #212932;
 }
 
 @media screen and (max-width: 736px) {
