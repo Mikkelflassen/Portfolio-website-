@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>HotStone Game Framework - SWEA Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Back to Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="generic.html">Blog</a></li>
+                <li><a href="elements.html">Resume</a></li>
+            </ul>
+            <ul class="icons" style="list-style: none; padding: 0;">
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-twitter" style="font-size: 20px; color: white;"></i>
+                        <span class="label">Twitter</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-facebook-f" style="font-size: 20px; color: white;"></i>
+                        <span class="label">Facebook</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto; filter: brightness(0) invert(1);">
+                        <span class="label">&#x200B; &#x200B; &#x200B; Codewars</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-github" style="font-size: 20px; color: white;"></i>
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <span class="date">Fall, 2024</span>
+                    <h1>HotStone Game Framework</h1>
+                    <h2>Software Engineering Architecture Project</h2>
+                </header>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <img src="images/Hostone2.png" alt="HotStone Game Interface" style="width: 100%; border-radius: 5px;">
+                </div>
+
+                <h3>Project Overview</h3>
+                <div style="text-align: left;">
+                    <p>HotStone is a comprehensive software engineering project developed as part of the Software Engineering Architecture (SWEA) course. This project serves as a practical application of modern software development methodologies, demonstrating how architectural principles, design patterns, and systematic testing combine to create a robust, extensible card game framework.</p>
+
+                    <p>The project transforms from simple game logic into a fully playable networked application with a graphical user interface, illustrating the evolution of software architecture from basic mechanics to complex distributed systems.</p>
+                </div>
+
+                <h3>Course Learning Objectives</h3>
+                <div style="text-align: left;">
+                    <p>The HotStone project was specifically designed to teach and demonstrate critical software engineering concepts:</p>
+
+                    <p><strong>Core Concepts Covered:</strong></p>
+                    <ul>
+                        <li><strong>Test-Driven Development (TDD):</strong> Writing tests before implementation to ensure code quality</li>
+                        <li><strong>Design Patterns:</strong> Applying proven solutions to common software design problems</li>
+                        <li><strong>Compositional Design:</strong> Building complex systems from simple, reusable components</li>
+                        <li><strong>Framework Architecture:</strong> Creating flexible systems that support multiple variants</li>
+                        <li><strong>Systematic Testing:</strong> Comprehensive test coverage including unit, integration, and system tests</li>
+                        <li><strong>Broker Pattern:</strong> Implementing remote method calls for distributed gaming</li>
+                    </ul>
+                </div>
+
+                <h3>Game Context</h3>
+                <div style="text-align: left;">
+                    <p><strong>Inspiration from Hearthstone</strong><br>
+                    HotStone draws inspiration from popular card games like Blizzard's Hearthstone. These games feature strategic card play, resource management, and turn-based combat. If you're unfamiliar with this genre, the project includes demonstration videos showcasing the user interface and gameplay mechanics.</p>
+
+                    <p><strong>Framework Philosophy</strong><br>
+                    Rather than creating a single game, HotStone is designed as a framework that supports multiple game variants. This approach demonstrates how proper architecture enables flexibility and extensibility, core principles in professional software development.</p>
+                </div>
+
+                <h3>Technical Architecture</h3>
+                <div style="text-align: left;">
+                    <p>The HotStone architecture evolved through multiple iterations, each adding complexity and demonstrating new architectural concepts.</p>
+
+                    <p><strong>Core Architecture Layers:</strong></p>
+
+                    <p><strong>1. Domain Layer (Game Logic)</strong></p>
+                    <ul>
+                        <li>Card management and abilities</li>
+                        <li>Player state and resources</li>
+                        <li>Turn management and game flow</li>
+                        <li>Win/loss conditions</li>
+                        <li>Game variant rules implementation</li>
+                    </ul>
+
+                    <p><strong>2. Framework Layer (Extensibility)</strong></p>
+                    <ul>
+                        <li>Strategy pattern for variant behaviors</li>
+                        <li>Factory pattern for card creation</li>
+                        <li>Observer pattern for event handling</li>
+                        <li>Template method for game flow</li>
+                        <li>Decorator pattern for card abilities</li>
+                    </ul>
+
+                    <p><strong>3. Presentation Layer (User Interface)</strong></p>
+                    <ul>
+                        <li>Graphical user interface for gameplay</li>
+                        <li>Card visualization and animations</li>
+                        <li>Player interaction handling</li>
+                        <li>Game state display</li>
+                        <li>Real-time updates and feedback</li>
+                    </ul>
+
+                    <p><strong>4. Distribution Layer (Networking)</strong></p>
+                    <ul>
+                        <li>Broker pattern implementation</li>
+                        <li>Client-server architecture</li>
+                        <li>Remote method invocation</li>
+                        <li>Network protocol design</li>
+                        <li>Session management</li>
+                    </ul>
+                </div>
+
+                <h3>Design Patterns Implementation</h3>
+                <div style="text-align: left;">
+                    <p>The project extensively employs design patterns to achieve maintainable, flexible code:</p>
+
+                    <p><strong>Strategy Pattern</strong><br>
+                    Enables different game variants to be swapped at runtime without changing core game logic. Each variant implements specific strategies for:</p>
+                    <ul>
+                        <li>Card drawing mechanics</li>
+                        <li>Mana generation rules</li>
+                        <li>Special ability triggers</li>
+                        <li>Win condition evaluation</li>
+                    </ul>
+
+                    <p><strong>Factory Pattern</strong><br>
+                    Abstracts card creation, allowing different decks and card types to be generated without tight coupling to specific card implementations.</p>
+
+                    <p><strong>Observer Pattern</strong><br>
+                    Enables the GUI to react to game state changes automatically, keeping the interface synchronized with game logic without direct dependencies.</p>
+
+                    <p><strong>Broker Pattern</strong><br>
+                    Facilitates network play by transparently handling remote method calls, allowing the same game logic to work locally or over the internet.</p>
+
+                    <p><strong>Template Method</strong><br>
+                    Defines the skeleton of the game flow algorithm, letting subclasses override specific steps while maintaining overall structure.</p>
+                </div>
+
+                <h3>Test-Driven Development Approach</h3>
+                <div style="text-align: left;">
+                    <p>The project emphasizes TDD as a cornerstone of quality software development:</p>
+
+                    <p><strong>Testing Strategy:</strong></p>
+                    <ul>
+                        <li><strong>Unit Tests:</strong> Testing individual components in isolation</li>
+                        <li><strong>Integration Tests:</strong> Verifying component interactions</li>
+                        <li><strong>System Tests:</strong> End-to-end gameplay scenarios</li>
+                        <li><strong>Network Tests:</strong> Distributed gameplay validation</li>
+                    </ul>
+
+                    <p><strong>TDD Benefits Demonstrated:</strong></p>
+                    <ul>
+                        <li>Early bug detection during development</li>
+                        <li>Confidence in refactoring and architectural changes</li>
+                        <li>Living documentation through test cases</li>
+                        <li>Simplified debugging with isolated test failures</li>
+                        <li>Design improvement through testability requirements</li>
+                    </ul>
+                </div>
+
+                <h3>Progressive Development Through Iterations</h3>
+                <div style="text-align: left;">
+                    <p>The course structures development through multiple iterations, each building on previous work:</p>
+
+                    <p><strong>Early Iterations (1-4):</strong></p>
+                    <ul>
+                        <li>Basic game mechanics implementation</li>
+                        <li>Core domain model design</li>
+                        <li>Initial testing framework</li>
+                        <li>Simple game variants</li>
+                    </ul>
+
+                    <p><strong>Middle Iterations (5-7):</strong></p>
+                    <ul>
+                        <li>Framework architecture introduction</li>
+                        <li>Design pattern application</li>
+                        <li>Advanced game variants</li>
+                        <li>Comprehensive test suites</li>
+                    </ul>
+
+                    <p><strong>Final Iterations (8-9):</strong></p>
+                    <ul>
+                        <li>Graphical user interface implementation</li>
+                        <li>Network play capability (Broker pattern)</li>
+                        <li>Polish and playability improvements</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+
+                <h3>Graphical User Interface</h3>
+                <div style="text-align: left;">
+                    <p>The culmination of the project in Iteration 8 includes a functional GUI that transforms HotStone from a code library into a playable game:</p>
+
+                    <p><strong>GUI Features:</strong></p>
+                    <ul>
+                        <li>Visual card representation with artwork</li>
+                        <li>Drag-and-drop card playing mechanics</li>
+                        <li>Real-time mana and health displays</li>
+                        <li>Turn indicator and game phase visualization</li>
+                        <li>Combat animations and effect feedback</li>
+                        <li>Interactive deck and hand management</li>
+                    </ul>
+
+                    <div style="max-width: 800px; margin: 20px auto;">
+                        <img src="images/Hotstone.png" alt="HotStone Gameplay Interface" style="width: 100%; border-radius: 5px;">
+                    </div>
+
+                    <p><strong>Technical Implementation:</strong></p>
+                    <ul>
+                        <li>Observer pattern for automatic UI updates</li>
+                        <li>Event-driven architecture for user interactions</li>
+                        <li>MVC pattern separating logic from presentation</li>
+                        <li>Responsive design for different screen sizes</li>
+                    </ul>
+                </div>
+
+                <h3>Network Play Implementation</h3>
+                <div style="text-align: left;">
+                    <p>The Broker pattern enables players to compete over the internet:</p>
+
+                    <p><strong>Broker Pattern Benefits:</strong></p>
+                    <ul>
+                        <li><strong>Transparency:</strong> Game logic remains unchanged for local or network play</li>
+                        <li><strong>Separation of Concerns:</strong> Networking code isolated from game code</li>
+                        <li><strong>Flexibility:</strong> Easy to switch between local and remote opponents</li>
+                        <li><strong>Testability:</strong> Network layer can be tested independently</li>
+                    </ul>
+
+                    <p><strong>Network Architecture:</strong></p>
+                    <ul>
+                        <li>Client-server model with game state synchronization</li>
+                        <li>Request-response protocol for player actions</li>
+                        <li>Session management for multiple concurrent games</li>
+                        <li>Error handling for network failures</li>
+                        <li>Security considerations for remote play</li>
+                    </ul>
+                </div>
+
+                <h3>Skills Demonstrated</h3>
+                <div style="text-align: left;">
+                    <ul>
+                        <li><strong>Software Architecture:</strong> Designing scalable, maintainable systems</li>
+                        <li><strong>Design Patterns:</strong> Practical application of Gang of Four patterns</li>
+                        <li><strong>Test-Driven Development:</strong> Writing tests first to drive design</li>
+                        <li><strong>Object-Oriented Design:</strong> Encapsulation, inheritance, polymorphism</li>
+                        <li><strong>Framework Development:</strong> Creating extensible, reusable code</li>
+                        <li><strong>Distributed Systems:</strong> Network programming and remote communication</li>
+                        <li><strong>User Interface Design:</strong> Creating intuitive, responsive interfaces</li>
+                        <li><strong>Refactoring:</strong> Improving code structure without changing behavior</li>
+                        <li><strong>Version Control:</strong> Managing complex codebase evolution</li>
+                        <li><strong>Documentation:</strong> Creating clear technical documentation</li>
+                    </ul>
+                </div>
+
+                <h3>Game Variants Implemented</h3>
+                <div style="text-align: left;">
+                    <p>The framework's flexibility is demonstrated through multiple game variants, each with unique rules:</p>
+
+                    <p><strong>Alpha Stone:</strong> Basic variant with simple mechanics for learning fundamentals</p>
+                    <p><strong>Beta Stone:</strong> Introduces resource management complexity</p>
+                    <p><strong>Gamma Stone:</strong> Adds special card abilities and interactions</p>
+                    <p><strong>Delta Stone:</strong> Complex variant approaching commercial game depth</p>
+                    <p><strong>Epsilon Stone:</strong> Fully playable variant with balanced gameplay</p>
+
+                    <p>Each variant demonstrates how architectural decisions enable code reuse while supporting diverse gameplay experiences.</p>
+                </div>
+
+                <h3>Technical Challenges & Solutions</h3>
+                <div style="text-align: left;">
+                    <p><strong>Challenge 1: Maintaining Separation of Concerns</strong><br>
+                    As features increased, keeping domain logic separate from presentation became difficult.</p>
+                    <p><em>Solution:</em> Strict adherence to MVC pattern and interface-based design maintained clean boundaries.</p>
+
+                    <p><strong>Challenge 2: Network Synchronization</strong><br>
+                    Ensuring both players see consistent game state over network connections.</p>
+                    <p><em>Solution:</em> Server-authoritative model with client state validation.</p>
+
+                    <p><strong>Challenge 3: Test Complexity</strong><br>
+                    Testing networked, GUI-based gameplay required sophisticated test infrastructure.</p>
+                    <p><em>Solution:</em> Test doubles (mocks, stubs) and dependency injection enabled isolated testing.</p>
+
+                    <p><strong>Challenge 4: Performance</strong><br>
+                    Complex game state calculations could impact responsiveness.</p>
+                    <p><em>Solution:</em> Optimization of hot paths and caching of computed values.</p>
+                </div>
+
+                <h3>Learning Outcomes</h3>
+                <div style="text-align: left;">
+                    <p>This project demonstrates comprehensive understanding of:</p>
+                    <ul>
+                        <li>How architectural decisions impact long-term maintainability</li>
+                        <li>The value of design patterns in solving common problems</li>
+                        <li>How TDD improves code quality and design</li>
+                        <li>The complexity of distributed systems and networking</li>
+                        <li>Balancing abstraction with practical implementation needs</li>
+                        <li>Iterative development and continuous refactoring</li>
+                    </ul>
+                </div>
+
+                <h3>Video Demonstrations</h3>
+                <div style="text-align: left;">
+                    <p>The course includes Danish-language video demonstrations of the final product, showcasing:</p>
+                    <ul>
+                        <li>Complete gameplay sessions</li>
+                        <li>User interface interactions</li>
+                        <li>Network play functionality</li>
+                        <li>Various game variants in action</li>
+                    </ul>
+                    <p>These videos demonstrate the evolution from code framework to playable game, illustrating the practical results of sound architectural principles.</p>
+                </div>
+
+                <h3>Professional Relevance</h3>
+                <div style="text-align: left;">
+                    <p>The HotStone project mirrors real-world professional software development:</p>
+                    <ul>
+                        <li><strong>Enterprise Patterns:</strong> The patterns used are standard in large-scale applications</li>
+                        <li><strong>Team Development:</strong> Architecture supports multiple developers working concurrently</li>
+                        <li><strong>Long-term Maintenance:</strong> Design decisions prioritize future extensibility</li>
+                        <li><strong>Quality Assurance:</strong> Comprehensive testing mirrors industry standards</li>
+                        <li><strong>Distributed Systems:</strong> Network architecture reflects modern cloud applications</li>
+                    </ul>
+                </div>
+
+                <h3>Conclusion</h3>
+                <div style="text-align: left;">
+                    <p>The HotStone Game Framework project represents a comprehensive journey through modern software engineering practices. By building a complex card game system from the ground up, this project demonstrates not just coding ability, but deep understanding of software architecture principles that scale from small projects to enterprise systems.</p>
+
+                    <p>The progression from basic game mechanics to a fully networked, GUI-based game illustrates how proper architectural foundations enable continuous evolution and feature addition without compromising code quality or maintainability.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <ul class="actions special">
+                        <li><a href="index.html" class="button large">Back to Projects</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>Rosenkrantz 17<br />
+                    Aarhus C, Denmark</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(+45) 60460280</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">Mikkelflassen15@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons" style="list-style: none; padding: 0;">
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-twitter" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">Twitter</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-facebook-f" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">Facebook</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto;">
+                                <span class="label">&#x200B; &#x200B; &#x200B; &#x200B; Codewars</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-github" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright">
+            <ul><li>&copy; Copywrite belongs to Mikkel Friis Lassen</li><li>Design: <a href="index.html">Mikkel Lassen</a></li></ul>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

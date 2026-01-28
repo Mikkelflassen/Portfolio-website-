@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>ITPDP - Intelligent Tracking Pan-Tilt Device Prototype</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Back to Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="generic.html">Blog</a></li>
+                <li><a href="elements.html">Resume</a></li>
+            </ul>
+            <ul class="icons" style="list-style: none; padding: 0;">
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-twitter" style="font-size: 20px; color: white;"></i>
+                        <span class="label">Twitter</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-facebook-f" style="font-size: 20px; color: white;"></i>
+                        <span class="label">Facebook</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto; filter: brightness(0) invert(1);">
+                        <span class="label">&#x200B; &#x200B; &#x200B; Codewars</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-github" style="font-size: 20px; color: white;"></i>
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <span class="date">Spring, 2024</span>
+                    <h1>ITPDP</h1>
+                    <h2>Intelligent Tracking Pan-Tilt Device Prototype</h2>
+                </header>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <img src="images/ITPDPcard.png" alt="ITPDP - Intelligent Tracking Pan-Tilt Device Prototype" style="width: 100%; border-radius: 5px;" />
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <ul class="actions special">
+                        <li><a href="images/repports/ITPDP_Rapport_Group3.pdf" target="_blank" class="button">Read the Report</a></li>
+                    </ul>
+                </div>
+
+                <h3>Project Overview</h3>
+                <div style="text-align: left;">
+                    <p>The ITPDP (Intelligent Tracking Pan-Tilt Device Prototype) represents a comprehensive exploration into autonomous object tracking and vehicle control systems. This tangible prototype demonstrates the integration of computer vision, robotics, and web-based control interfaces to create an intelligent tracking device capable of following objects while recording video.</p>
+                </div>
+
+                <h3>System Architecture</h3>
+                <div style="text-align: left;">
+                    <p>The prototype consists of three main interconnected components working in harmony:</p>
+
+                    <p><strong>1. Flask Web Application (Python-Driven)</strong><br>
+                    The control interface allows users to manage the prototype's functionality through an intuitive web interface. Users can:</p>
+                    <ul>
+                        <li>Control vehicle movement (forward, backward, left, right)</li>
+                        <li>Toggle video recording on and off</li>
+                        <li>Enable or disable object tracking mode</li>
+                        <li>Monitor real-time status of the system</li>
+                    </ul>
+
+                    <p><strong>2. Raspberry Pi 4B (Core Processing Unit)</strong><br>
+                    The RPi4 serves as the brain of the operation, handling multiple critical functions:</p>
+                    <ul>
+                        <li>Real-time object detection and tracking algorithms</li>
+                        <li>Video recording management using Raspberry Pi Camera Module v3</li>
+                        <li>Control of pan and tilt servo motors for camera positioning</li>
+                        <li>Communication between the web interface and the EV3 brick</li>
+                    </ul>
+
+                    <p><strong>3. LEGO Mindstorm EV3-Brick</strong><br>
+                    The EV3 brick handles the mechanical movement of the entire vehicle platform, powered by two large EV3 motors for reliable mobility across various surfaces.</p>
+                </div>
+
+                <h3>Hardware Components</h3>
+                <div style="text-align: left;">
+                    <p>The hardware setup demonstrates efficient integration of consumer and professional-grade components:</p>
+
+                    <p><strong>Core Components:</strong></p>
+                    <ul>
+                        <li><strong>Raspberry Pi 4B:</strong> Central processing unit managing all software operations</li>
+                        <li><strong>PCA9685 Servo Driver:</strong> Provides precise control signals for the pan-tilt mechanism</li>
+                        <li><strong>2x SG90 Servo Motors:</strong> Enable smooth pan and tilt movement for the camera head</li>
+                        <li><strong>1080p Webcam:</strong> Primary input for object tracking algorithms</li>
+                        <li><strong>Raspberry Pi Camera Module v3:</strong> High-quality video recording device</li>
+                        <li><strong>LEGO Mindstorm EV3-Brick:</strong> Motor control and vehicle movement platform</li>
+                        <li><strong>2x Large EV3 Motors:</strong> Provide robust propulsion for the vehicle</li>
+                    </ul>
+                </div>
+
+                <h3>Key Features</h3>
+                <div style="text-align: left;">
+                    <ul>
+                        <li><strong>Autonomous Object Tracking:</strong> Computer vision algorithms detect and follow objects in real-time, adjusting camera position automatically</li>
+                        <li><strong>Remote Web Control:</strong> Flask-based interface accessible from any device on the network</li>
+                        <li><strong>Dual Camera System:</strong> Separate cameras for tracking and recording ensure optimal performance</li>
+                        <li><strong>Mobile Platform:</strong> EV3-based chassis provides stable and responsive movement</li>
+                        <li><strong>Modular Design:</strong> Component separation allows for easy maintenance and upgrades</li>
+                    </ul>
+                </div>
+
+                <h3>Technical Implementation</h3>
+                <div style="text-align: left;">
+                    <p>The system architecture showcases modern approaches to embedded systems and IoT device control:</p>
+
+                    <p><strong>Software Stack:</strong></p>
+                    <ul>
+                        <li>Python Flask for web server and API endpoints</li>
+                        <li>OpenCV for computer vision and object tracking</li>
+                        <li>Servo control libraries for precise motor positioning</li>
+                        <li>EV3 Python library for vehicle movement commands</li>
+                    </ul>
+
+                    <p><strong>Communication Flow:</strong></p>
+                    <ul>
+                        <li>User inputs commands via web interface</li>
+                        <li>Flask backend processes requests and sends commands</li>
+                        <li>RPi4 executes tracking algorithms and servo control</li>
+                        <li>EV3 brick receives movement commands and controls motors</li>
+                        <li>Real-time feedback updates the web interface</li>
+                    </ul>
+                </div>
+
+                <h3>Applications & Use Cases</h3>
+                <div style="text-align: left;">
+                    <p>This prototype demonstrates capabilities applicable to various real-world scenarios:</p>
+                    <ul>
+                        <li><strong>Automated Surveillance:</strong> Security monitoring with automatic subject tracking</li>
+                        <li><strong>Wildlife Observation:</strong> Non-intrusive animal behavior recording</li>
+                        <li><strong>Sports Recording:</strong> Autonomous camera operator for athletic events</li>
+                        <li><strong>Educational Tool:</strong> Teaching platform for robotics and computer vision</li>
+                        <li><strong>Content Creation:</strong> Automated camera work for video production</li>
+                    </ul>
+                </div>
+
+                <h3>Technical Challenges & Solutions</h3>
+                <div style="text-align: left;">
+                    <p>During development, several technical challenges were addressed:</p>
+
+                    <p><strong>Challenge 1: Real-time Processing</strong><br>
+                    Balancing tracking accuracy with processing speed on the Raspberry Pi required optimization of computer vision algorithms and careful frame rate management.</p>
+
+                    <p><strong>Challenge 2: Component Integration</strong><br>
+                    Coordinating communication between the Flask app, RPi4, and EV3 brick required implementing robust error handling and command queuing systems.</p>
+
+                    <p><strong>Challenge 3: Power Management</strong><br>
+                    Ensuring stable power delivery to all components while maintaining portability required careful power distribution planning.</p>
+                </div>
+
+                <h3>Skills Demonstrated</h3>
+                <div style="text-align: left;">
+                    <ul>
+                        <li>Full-stack web development (Flask, HTML, JavaScript)</li>
+                        <li>Computer vision and image processing (OpenCV)</li>
+                        <li>Embedded systems programming (Raspberry Pi, EV3)</li>
+                        <li>Hardware integration and servo control</li>
+                        <li>System architecture design</li>
+                        <li>Real-time systems programming</li>
+                        <li>Network communication protocols</li>
+                    </ul>
+                </div>
+
+                <h3>Future Enhancements</h3>
+                <div style="text-align: left;">
+                    <p>Potential improvements for future iterations:</p>
+                    <ul>
+                        <li>Machine learning integration for improved tracking accuracy</li>
+                        <li>Multiple object tracking and prioritization</li>
+                        <li>Autonomous navigation with obstacle avoidance</li>
+                        <li>Cloud storage integration for recorded videos</li>
+                        <li>Mobile app development for iOS and Android</li>
+                        <li>GPS integration for outdoor tracking scenarios</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <ul class="actions special">
+                        <li><a href="index.html" class="button large">Back to Projects</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>Rosenkrantz 17<br />
+                    Aarhus C, Denmark</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(+45) 60460280</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">Mikkelflassen15@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons" style="list-style: none; padding: 0;">
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-twitter" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">Twitter</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-facebook-f" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">Facebook</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto;">
+                                <span class="label">&#x200B; &#x200B; &#x200B; &#x200B; Codewars</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-github" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright">
+            <ul><li>&copy; Copywrite belongs to Mikkel Friis Lassen</li><li>Design: <a href="index.html">Mikkel Lassen</a></li></ul>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
