@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Modern Battleship - Physical Computing Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Back to Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="generic.html">Blog</a></li>
+                <li><a href="elements.html">Resume</a></li>
+            </ul>
+            <ul class="icons" style="list-style: none; padding: 0;">
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-twitter" style="font-size: 20px; color: white;"></i>
+                        <span class="label">Twitter</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-facebook-f" style="font-size: 20px; color: white;"></i>
+                        <span class="label">Facebook</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto; filter: brightness(0) invert(1);">
+                        <span class="label">&#x200B; &#x200B; &#x200B; Codewars</span>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin-right: 10px;">
+                    <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <i class="icon brands fa-github" style="font-size: 20px; color: white;"></i>
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <span class="date">Winter, 2025</span>
+                    <h1>Modern Battleship</h1>
+                    <h2>Physical Computing Game Experience</h2>
+                </header>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <img src="images/PhyscomRendering.png" alt="Modern Battleship - Physical Computing Game" style="width: 100%; border-radius: 5px;" />
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <ul class="actions special">
+                        <li><a href="images/repports/PhysComp_Final_Rapport%20(3).pdf" target="_blank" class="button">Read the Report</a></li>
+                    </ul>
+                </div>
+
+                <h3>Project Overview</h3>
+                <div style="text-align: left;">
+                    <p>This project reimagines the classic Battleship board game by transforming it from a purely information-based game into a tactile, immersive physical computing experience. By introducing hands-on controls and immediate physical feedback, we sought to enhance player involvement and satisfaction beyond the traditional luck-based gameplay.</p>
+                </div>
+
+                <h3>Design Philosophy</h3>
+                <div style="text-align: left;">
+                    <p><strong>The Problem with Traditional Battleship</strong><br>
+                    The original Battleship game relies heavily on two elements: information gathering and luck. While these can create engaging gameplay, we identified an opportunity to deepen player involvement by adding physical interaction.</p>
+
+                    <p><strong>Our Solution: Hands-On Engagement</strong><br>
+                    By literally getting hands-on with the game, players experience:</p>
+                    <ul>
+                        <li>The satisfaction of setting precise control coordinates</li>
+                        <li>The tactile engagement of pressing a physical firing button</li>
+                        <li>Visual feedback through LED animations when shots hit their targets</li>
+                        <li>Physical feedback through vibration motors when ships are struck</li>
+                        <li>Enhanced emotional investment through multi-sensory interaction</li>
+                    </ul>
+
+                    <p><strong>Research Objective</strong><br>
+                    The core question driving this project: Can changing the fundamental core mechanics of Battleship while maintaining its strategic elements still be entertaining? Our prototype answers this question by demonstrating that physical computing elements can significantly enhance player engagement.</p>
+                </div>
+
+                <h3>Technical Implementation</h3>
+                <div style="text-align: left;">
+                    <p>This project showcases comprehensive physical computing skills developed throughout the Physical Computing course. The implementation required careful coordination of multiple microcontrollers, display systems, and feedback mechanisms.</p>
+
+                    <p><strong>Complete Components List:</strong></p>
+                    <ul>
+                        <li><strong>4x AtMega328p Microcontrollers:</strong> Distributed processing for different game functions</li>
+                        <li><strong>2x 74HC299p Shift Registers:</strong> Expanding I/O capabilities for LED control</li>
+                        <li><strong>4x 18650 3.7v 3300mAh Batteries:</strong> Portable power solution</li>
+                        <li><strong>2x DC-DC Step Down LM2596:</strong> Voltage regulation for stable operation</li>
+                        <li><strong>1x WS2812B 5050 RGB LED Strip (138 LEDs):</strong> Game board visual feedback</li>
+                        <li><strong>1x 10K Linear Slide Potentiometer:</strong> Coordinate selection (axis 1)</li>
+                        <li><strong>1x 10K Round Dial Potentiometer:</strong> Coordinate selection (axis 2)</li>
+                        <li><strong>2x Buttons:</strong> Fire control and game state management</li>
+                        <li><strong>1x LCD Display (16x2):</strong> Game information and coordinate display</li>
+                        <li><strong>1x LCD I²C Serial Interface:</strong> Simplified LCD communication</li>
+                        <li><strong>Diodes:</strong> 2 per ship plus flyback diodes for vibration motor protection</li>
+                        <li><strong>1x MOSFET:</strong> High-current switching for motors</li>
+                        <li><strong>4x Coin Vibration Motors:</strong> Tactile feedback when ships are hit</li>
+                        <li><strong>1x 2200 μF Capacitor:</strong> Power smoothing for LED strip</li>
+                        <li><strong>4x 16MHz Crystals:</strong> Clock signals for microcontrollers</li>
+                        <li><strong>8x 22 μF Capacitors:</strong> Decoupling capacitors for stable operation</li>
+                        <li><strong>Various Resistors:</strong> Current limiting and voltage division</li>
+                    </ul>
+                </div>
+
+                <h3>System Architecture</h3>
+                <div style="text-align: left;">
+                    <p><strong>Microcontroller Distribution</strong><br>
+                    Four AtMega328p microcontrollers work in concert to handle different aspects of the game:</p>
+                    <ul>
+                        <li><strong>Controller 1:</strong> Main game logic and state management</li>
+                        <li><strong>Controller 2:</strong> LED strip control and animation</li>
+                        <li><strong>Controller 3:</strong> Input processing (potentiometers and buttons)</li>
+                        <li><strong>Controller 4:</strong> Display management and haptic feedback</li>
+                    </ul>
+
+                    <p><strong>Input System</strong><br>
+                    Players interact with the game through carefully designed analog controls:</p>
+                    <ul>
+                        <li>Linear slide potentiometer for X-axis coordinate selection</li>
+                        <li>Rotary potentiometer for Y-axis coordinate selection</li>
+                        <li>Circular firing button for shot execution</li>
+                        <li>Secondary button for game state controls</li>
+                    </ul>
+
+                    <p><strong>Visual Feedback System</strong><br>
+                    The 138-LED WS2812B strip provides rich visual feedback:</p>
+                    <ul>
+                        <li>Grid visualization representing the game board</li>
+                        <li>Color-coded hit/miss indication</li>
+                        <li>Ship placement visualization</li>
+                        <li>Animation sequences for successful hits</li>
+                        <li>Game state indication (turn changes, game over)</li>
+                    </ul>
+
+                    <p><strong>Haptic Feedback</strong><br>
+                    Four coin vibration motors provide immediate physical feedback:</p>
+                    <ul>
+                        <li>Unique vibration pattern for each ship type</li>
+                        <li>Intensity variation based on ship size</li>
+                        <li>Immediate response when ships are struck</li>
+                        <li>MOSFET-controlled for consistent performance</li>
+                    </ul>
+
+                    <p><strong>Information Display</strong><br>
+                    16x2 LCD with I²C interface displays:</p>
+                    <ul>
+                        <li>Current coordinate selection</li>
+                        <li>Hit/miss history</li>
+                        <li>Turn indication</li>
+                        <li>Game statistics</li>
+                        <li>Victory/defeat messages</li>
+                    </ul>
+                </div>
+
+                <h3>Power Management</h3>
+                <div style="text-align: left;">
+                    <p>Portable operation required careful power system design:</p>
+                    <ul>
+                        <li><strong>Battery Configuration:</strong> Four 18650 cells provide reliable portable power</li>
+                        <li><strong>Voltage Regulation:</strong> Dual LM2596 step-down converters supply stable 5V and 3.3V rails</li>
+                        <li><strong>LED Power:</strong> 2200 μF capacitor prevents voltage sag during LED animations</li>
+                        <li><strong>Motor Protection:</strong> Flyback diodes protect circuitry from motor back-EMF</li>
+                    </ul>
+                </div>
+
+                <h3>Game Mechanics Enhancement</h3>
+                <div style="text-align: left;">
+                    <p><strong>Core Gameplay Loop:</strong></p>
+                    <ol>
+                        <li>Player adjusts potentiometers to select target coordinates</li>
+                        <li>LCD displays current coordinate selection in real-time</li>
+                        <li>Player confirms selection by pressing the firing button</li>
+                        <li>LED strip animates the shot trajectory</li>
+                        <li>Hit detection determines outcome:
+                            <ul>
+                                <li><strong>Miss:</strong> Blue LED indication at coordinate</li>
+                                <li><strong>Hit:</strong> Red LED indication + vibration motor activation + sound effect</li>
+                            </ul>
+                        </li>
+                        <li>Turn switches to other player</li>
+                    </ol>
+
+                    <p><strong>Physical Engagement Benefits:</strong></p>
+                    <ul>
+                        <li><strong>Precision Control:</strong> Analog potentiometers require deliberate, precise movement</li>
+                        <li><strong>Commitment:</strong> Physical button press creates decision finality</li>
+                        <li><strong>Celebration:</strong> Visual and tactile feedback amplifies victory moments</li>
+                        <li><strong>Tension:</strong> Physical interaction heightens anticipation during targeting</li>
+                    </ul>
+                </div>
+
+                <h3>Technical Challenges & Solutions</h3>
+                <div style="text-align: left;">
+                    <p><strong>Challenge 1: LED Strip Timing</strong><br>
+                    WS2812B LEDs require precise timing that can conflict with other operations.</p>
+                    <p><em>Solution:</em> Dedicated microcontroller for LED control with interrupt-free animation routines.</p>
+
+                    <p><strong>Challenge 2: Coordinate Accuracy</strong><br>
+                    Analog potentiometers can be jittery, affecting coordinate precision.</p>
+                    <p><em>Solution:</em> Implemented moving average filter with hysteresis to stabilize readings.</p>
+
+                    <p><strong>Challenge 3: Power Consumption</strong><br>
+                    138 LEDs at full brightness can draw significant current.</p>
+                    <p><em>Solution:</em> Brightness limiting and selective LED activation to manage power draw.</p>
+
+                    <p><strong>Challenge 4: Microcontroller Communication</strong><br>
+                    Four microcontrollers needed reliable data exchange.</p>
+                    <p><em>Solution:</em> Implemented I²C bus communication with error checking and retry logic.</p>
+                </div>
+
+                <h3>Skills Demonstrated</h3>
+                <div style="text-align: left;">
+                    <ul>
+                        <li><strong>Embedded Systems Programming:</strong> AtMega328p firmware development in C/C++</li>
+                        <li><strong>Circuit Design:</strong> Power distribution, protection circuits, and signal conditioning</li>
+                        <li><strong>Multi-Controller Architecture:</strong> Distributed system design and I²C communication</li>
+                        <li><strong>Analog Input Processing:</strong> ADC reading, filtering, and calibration</li>
+                        <li><strong>LED Strip Control:</strong> WS2812B protocol implementation and animation</li>
+                        <li><strong>Power Electronics:</strong> Voltage regulation and battery management</li>
+                        <li><strong>Human-Computer Interaction:</strong> Tactile interface design and feedback systems</li>
+                        <li><strong>Game Design:</strong> Mechanics enhancement through physical computing</li>
+                        <li><strong>Prototyping:</strong> Physical construction and testing</li>
+                        <li><strong>Documentation:</strong> Component selection justification and system architecture</li>
+                    </ul>
+                </div>
+
+                <h3>Results & Player Feedback</h3>
+                <div style="text-align: left;">
+                    <p>Testing with multiple player groups confirmed our hypothesis that physical interaction enhances engagement:</p>
+                    <ul>
+                        <li>Players reported feeling more "in control" compared to traditional Battleship</li>
+                        <li>The tactile feedback created memorable moments during successful hits</li>
+                        <li>Visual LED animations increased excitement and spectator engagement</li>
+                        <li>The physical act of aiming with potentiometers added strategic tension</li>
+                        <li>Overall entertainment value increased despite maintaining core strategic elements</li>
+                    </ul>
+                </div>
+
+                <h3>Future Enhancements</h3>
+                <div style="text-align: left;">
+                    <p>Potential improvements for future iterations:</p>
+                    <ul>
+                        <li><strong>Wireless Operation:</strong> Separate control panels for two players</li>
+                        <li><strong>Sound Effects:</strong> Audio feedback system for hits, misses, and victory</li>
+                        <li><strong>Game Modes:</strong> Alternative rule sets and difficulty levels</li>
+                        <li><strong>Statistics Tracking:</strong> Shot accuracy, hit percentage, and game history</li>
+                        <li><strong>Online Connectivity:</strong> Internet-connected play with remote opponents</li>
+                        <li><strong>AI Opponent:</strong> Single-player mode with computer adversary</li>
+                    </ul>
+                </div>
+
+                <h3>Video Link</h3>
+                <div style="text-align: left;">
+                    <p>For a complete demonstration of the prototype in action, you can watch the full video demonstration on YouTube at: <a href="https://youtu.be/r4SEPVFEz3s" target="_blank">https://youtu.be/r4SEPVFEz3s</a></p>
+                </div>
+
+                <h3>Conclusion</h3>
+                <div style="text-align: left;">
+                    <p>This project successfully demonstrates that changing core game mechanics through physical computing can enhance player engagement without sacrificing strategic gameplay. By adding tactile controls, visual feedback, and haptic responses, we transformed Battleship from a passive information game into an immersive physical experience. The prototype validates the hypothesis that hands-on interaction creates deeper player investment and more memorable gaming moments.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <ul class="actions special">
+                        <li><a href="index.html" class="button large">Back to Projects</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>Rosenkrantz 17<br />
+                    Aarhus C, Denmark</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(+45) 60460280</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">Mikkelflassen15@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons" style="list-style: none; padding: 0;">
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://twitter.com/mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-twitter" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">Twitter</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://www.facebook.com/profile.php?id=100004798129478" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-facebook-f" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">Facebook</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://www.codewars.com/users/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <img src="https://www.codewars.com/favicon.ico" alt="CodeWars" style="height: 20px; width: auto;">
+                                <span class="label">&#x200B; &#x200B; &#x200B; &#x200B; Codewars</span>
+                            </a>
+                        </li>
+                        <li style="display: inline-block; margin-right: 10px;">
+                            <a href="https://github.com/Mikkelflassen" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <i class="icon brands fa-github" style="font-size: 20px; color: rgb(0, 0, 0);"></i>
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright">
+            <ul><li>&copy; Copywrite belongs to Mikkel Friis Lassen</li><li>Design: <a href="index.html">Mikkel Lassen</a></li></ul>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
